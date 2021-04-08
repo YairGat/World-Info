@@ -50,7 +50,7 @@ def find_time_zone(city):
 
 
 """"
-Gets city and return the current time in this city.
+This function gets a city and return the current time in this city.
 """
 
 
@@ -62,7 +62,7 @@ def get_time(city):
 
 
 """"
-Get city and return the weather in this city.
+This function gets a city and return the weather in this city.
 """
 
 
