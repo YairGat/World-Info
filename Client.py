@@ -6,8 +6,8 @@ import json
 from City import City
 
 capitals = City()
-capital_arr = capitals.get_cities() # Array of all the cities.
-information_type = ['Weather', 'Time', 'Local News']  # All the optional information.
+capital_arr = capitals.get_cities() # Array of all cities.
+information_type = ['Weather', 'Time', 'Local News']  # All optional information.
 sg.theme('DarkGrey9')
 layout = [[sg.Text('Chose city and information type you want to know:')],
           [sg.Listbox(values=capital_arr, size=(30, 6), key='City')],
@@ -19,7 +19,7 @@ HOST = '127.0.0.1'  # The server's hostname or IP address
 PORT = 65432  # The port used by the server
 while True:  # Event Loop
     event, values = window.read()
-    flag = 0  # The flag changes to 1 when the client click on Exit.
+    flag = 0  # The flag changes to 1 when the client is clicking on Exit.
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((HOST, PORT))
         if event in (sg.WIN_CLOSED, 'Exit'):
